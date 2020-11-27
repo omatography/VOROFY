@@ -8,9 +8,12 @@ $(document).ready(() =>{
         }else{
             $('#navbar').removeClass("navbar-light");
             $('#navbar').addClass("navbar-dark");
-            $("#navbar-img").attr('src','assets/images/VOROFY LOGO WHITE.png')
+            $("#navbar-img").attr('src','assets/images/VOROFY LOGO WHITE.png');
+            $('#a').addClass('active');
+            $('#b').removeClass("active");
         }
     });
+
     $('#navbar').addClass(" animate__animated animate__fadeInDown animate__fast");
     $('#home-content').addClass(" animate__animated animate__fadeIn animate__fast");
     
@@ -82,40 +85,13 @@ $(document).ready(() =>{
         
 
     });
-    // $('#service-box').mouseleave(() => {
-    //     $('#service-box').removeClass("box-after");
-    //     $('#img').removeClass("img-after");
-    //     $('#head').removeClass("d-none");
-    //     $('#para').addClass("d-none");
-
-    // });
 
 
 
 
 
     $('#about').waypoint(function(direction){
-        $('#about').addClass('animate__animated animate__fadeIn animate__fast ');
-        if(direction == 'down'){
-            $('#a').removeClass('active');
-            $('#b').removeClass('active');
-            $('#c').removeClass('active');
-            $('#d').removeClass('active');
-            $('#e').removeClass('active');
-            $('#a').addClass('active');
-        }else{
-            $('#a').removeClass('active');
-            $('#b').removeClass('active');
-            $('#c').removeClass('active');
-            $('#d').removeClass('active');
-            $('#e').removeClass('active');
-        }
-        },{
-            offset: '70%'
-    });
-
-    $('#services').waypoint(function(direction){
-        $('#services').addClass('animate__animated animate__fadeIn animate__fast ');
+        $('#about-contents').addClass('animate__animated animate__fadeIn animate-fast  ');
         if(direction == 'down'){
             $('#a').removeClass('active');
             $('#b').removeClass('active');
@@ -129,14 +105,36 @@ $(document).ready(() =>{
             $('#c').removeClass('active');
             $('#d').removeClass('active');
             $('#e').removeClass('active');
+            $('#b').addClass('active');
+        }
+        },{
+            offset: '70%'
+    });
+
+    $('#services').waypoint(function(direction){
+        $('#s1').addClass('animate__animated animate__fadeIn animate-fast ');
+        $('#s2').addClass('animate__animated animate__fadeIn animate-fast ');
+        if(direction == 'down'){
+            $('#a').removeClass('active');
+            $('#b').removeClass('active');
+            $('#c').removeClass('active');
+            $('#d').removeClass('active');
+            $('#e').removeClass('active');
+            $('#c').addClass('active');
+        }else{
+            $('#a').removeClass('active');
+            $('#b').removeClass('active');
+            $('#c').removeClass('active');
+            $('#d').removeClass('active');
+            $('#e').removeClass('active');
             $('#a').addClass('active');
         }
         },{
             offset: '60%'
     });
 
-    $('#portfolio').waypoint(function(direction){
-        $('#portfolio').addClass('animate__animated animate__fadeIn animate__fast');
+    $('#work').waypoint(function(direction){
+        $('#work-contents').addClass('animate__animated animate__fadeInLeft animate-fast');
         if(direction == 'down'){
             $('#a').removeClass('active');
             $('#b').removeClass('active');
@@ -156,8 +154,9 @@ $(document).ready(() =>{
             offset: '60%'
     });
 
-    $('#contacts').waypoint(function(direction){
-        $('#contacts').addClass('animate__animated animate__fadeIn animate__fast');
+    $('#contact').waypoint(function(direction){
+        $('#c1').addClass('animate__animated animate__fadeIn animate__fast');
+        $('#c2').addClass('animate__animated animate__fadeIn animate__fast');
         if(direction == 'down'){
             $('#a').removeClass('active');
             $('#b').removeClass('active');
@@ -173,29 +172,6 @@ $(document).ready(() =>{
             $('#e').removeClass('active');
             $('#d').addClass('active');
         }
-        },{
-            offset: '60%'
-    });
-
-    $('#test').waypoint(function(direction){
-        $('#testl').addClass('animate__animated animate__fadeInLeft animate__fast');
-        $('#testr').addClass('animate__animated animate__fadeInRight animate__fast');
-        if(direction == 'down'){
-            $('#a').removeClass('active');
-            $('#b').removeClass('active');
-            $('#c').removeClass('active');
-            $('#d').removeClass('active');
-            $('#e').removeClass('active');
-            $('#c').addClass('active');
-        }else{
-            $('#a').removeClass('active');
-            $('#b').removeClass('active');
-            $('#c').removeClass('active');
-            $('#d').removeClass('active');
-            $('#e').removeClass('active');
-            $('#b').addClass('active');
-        }
-    
         },{
             offset: '60%'
     });
