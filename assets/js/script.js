@@ -105,7 +105,7 @@ $(document).ready(() =>{
             $('#c').removeClass('active');
             $('#d').removeClass('active');
             $('#e').removeClass('active');
-            $('#b').addClass('active');
+            $('#a').addClass('active');
         }
         },{
             offset: '70%'
@@ -127,7 +127,7 @@ $(document).ready(() =>{
             $('#c').removeClass('active');
             $('#d').removeClass('active');
             $('#e').removeClass('active');
-            $('#a').addClass('active');
+            $('#b').addClass('active');
         }
         },{
             offset: '60%'
